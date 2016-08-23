@@ -14,21 +14,26 @@
     <div data-role="page" id="list-page">
         <div data-role="header" data-position="fixed" data-theme="c">
          <a href="javascript:history.back()">戻る</a>
+         <a href="#add-page" data-icon="add" class="ui-btn-right">保存</a>
             <h1>マイプラン一覧</h1>
         </div>
         <div data-role="content">
             <ul data-role="listview" data-inset="true" id="todo-list"></ul>
              
         <img src="js/koukoku2.jpg" width="300" height="50"style="position:absolute; bottom:0; " usemap="">
-      </div>
-        </div>
-        <h1>保存</h1>
-            <a href="hozonnrennsyuu.html" data-icon="back" class="ui-btn-left">back</a>
+       </div>
+       </div>
+        <div data-role="page" id="add-page">
+        <div data-role="header" data-position="fixed" data-theme="c">
+            <h1>保存</h1>
+            <a href="shoto2.html" data-icon="back" class="ui-btn-left">back</a>
         </div>
         <div data-role="content">
             <input id="todo-title" type="text" placeholder="TODO Title">
             <input id="add-button" type="button" value="Save" onclick="addTodo()">
+        </div>
     </div>
     </div>
+       
 </body>
 </html>
