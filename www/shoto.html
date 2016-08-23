@@ -13,15 +13,16 @@
 <body>
     <div data-role="page" id="list-page">
         <div data-role="header" data-position="fixed" data-theme="c">
-        <a href="index.html" data-icon="back" class="ui-btn-left">戻る</a>
+        <a href="javascript:history.back()">戻る</a>
             <h1>liberty trip</h1>
           
 
         </div>
         <div data-role="content">
             <ul data-role="listview" data-inset="true" id="todo-list"></ul>
-             
+            
              <strong>旅行日程 出発日と帰宅日を押して下さい</strong><br /><br />
+           
             <table border="0" cellspacing="1.2" cellpadding="1.2" bgcolor="#CCCCCC" style="font: 12px; color: #666666;">
 <tr>
 <td align="center" colspan="7" bgcolor="#EEEEEE" height="18" style="color: #666666;">2016年8月</td></tr>
@@ -35,6 +36,7 @@
 <td align="center" width="20" height="18" bgcolor="#A6C0E1" style="color: #666666;">土</td>
 </tr>
 <tr>
+<span onClick="this.style.background="FFA500">
 <td align="center" height="18" bgcolor="#FFCC99" style="color: #666666;">　</td>
 <td align="center" bgcolor="#FFFFFF" style="color: #666666;">1</td>
 <td align="center" bgcolor="#FFFFFF" style="color: #666666;">2</td>
@@ -78,20 +80,36 @@
 <td align="center" bgcolor="#FFFFFF" style="color: #666666;">　</td>
 <td align="center" bgcolor="#FFFFFF" style="color: #666666;">　</td>
 <td align="center" bgcolor="#FFFFFF" style="color: #666666;">　</td>
+
+</center>    
+</span>
 </tr>
 <tr>
 
 </tr>
-</table>
-          
-        <br /><strong>出発地</strong> 　<span style="border-style: solid ; border-width: 1px; width: 300px;"> 岐阜県岐阜市橋本町××-××</span><br />
-        <strong>目的地</strong> 　<span style="border-style: solid ; border-width: 1px; width: 300px;"> 京都府▼</span>
+</table> 
+        <br /><strong>出発地</strong> 　<span style="border-style: solid ; border-width: 1px; width: 300px;"> 岐阜県岐阜市橋本町×-××</span><br />
+        <strong>目的地</strong> 　<span style="border-style: solid ; border-width: 1px; width: 300px;"> 京都府　　　　　　　　</span>
         <br /><br />
-       <strong>人数・性別</strong> 　男 <span style="border-style: solid ; border-width: 1px; width: 300px;"> ２▼</span>人 　女 <span style="border-style: solid ; border-width: 1px; width: 300px;"> ２▼</span>人
+       <strong>人数・性別</strong> 　男 <span style="border-style: solid ; border-width: 1px; width: 300px;">  ２ </span>人 　女 <span style="border-style: solid ; border-width: 1px; width: 300px;">  ２ </span>人
        <br /><br />
-       <strong>予算(一人当たり)</strong> 　<span style="border-style: solid ; border-width: 1px; width: 300px;"> 40,000～50,000▼</span>
-       <br /><br />
-       <strong>車使用</strong>　あり <span style="border-style: solid ; border-width: 1px; width: 300px;"> &#10004;</span> 　なし <span style="border-style: solid ; border-width: 1px; width: 300px;">　 </span>
+       <strong>予算(一人当たり)</strong> <p>
+<select > 
+<option >~10000円</option>
+<option >10000~20000円</option>
+<option >20000~30000円</option>
+<option >30000~40000円</option>
+<option >40000~50000円</option>
+<option >50000~60000円</option>
+<option >60000~70000円</option>
+<option >70000~80000円</option>
+<option >80000~90000円</option>
+<option >90000~100000円</option>
+<option >100000円~</option>
+</select>
+</p>
+　
+      <strong>車使用</strong>　あり <span style="border-style: solid ; border-width: 1px; width: 300px;"> &#10004;</span> 　なし <span style="border-style: solid ; border-width: 1px; width: 300px;"> 　</span>
        <br /><br />
        <strong>キーワード</strong>　<span style="border-style: solid ; border-width: 1px; width: 300px;"> 和菓子 </span>
       <br /><br />
@@ -104,6 +122,10 @@
        </center>
        </FONT>
        <br /><br />
+       <form method="post" action="example.cgi">
+
+</form>
+
        </div>
        <center>
         <img src="js/koukoku2.jpg" width="300" height="50">
