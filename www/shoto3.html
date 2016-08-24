@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
@@ -11,6 +12,7 @@
     <script src="js/app.js"></script>
 </head>
 <body>
+
     <div data-role="page" id="list-page">
         <div data-role="header" data-position="fixed" data-theme="c">
         <a href="javascript:history.back()">戻る</a>
@@ -20,26 +22,43 @@
         <div data-role="content">
             <ul data-role="listview" data-inset="true" id="todo-list"></ul>
            　 お寺巡りコース①　　お寺巡りコース②<br/>
-           　<nobr><img src="js/kinnkakuzi.jpg" width="100" height="100" align="left" hspace="23"><img src="js/onnsenn.jpg" width="100" height="100" align="right" hspace="14"></nobr><br/><br/><br/><br/><br/><br/><br/>
-           　  グルメコース　　　　和菓子コース
-           　<img src="js/gurume.JPG" width="100" height="100" align="left" hspace="23"><img src="js/wagasi.jpeg" width="100" height="100" align="right" hspace="14"><br/><br/><br/><br/><br/><br/><br/><br/>
-           　和風コース　　　　　欲張りコース<br/>
-           　<a href="otani.html"><img src="js/wahuu.jpg" width="100" height="100" align="left" hspace="23"></a><img src="js/yokubari.jpg" width="100" height="100" align="right" hspace="14"><br/><br/><br/><br/><br/><br/><br/>
-           <center> <div style="border-style: solid ; border-width: 0.5px; width: 100px; border-radius: 10px; background-color: #d8d8d8"class="more"><strong>もっと見る</strong></div></center>
-   <br>
+           　<nobr><img src="js/kinnkakuzi.jpg" width="100" height="100" align="left" hspace="23"><img src="otera3.jpg" width="100" height="100" align="right" hspace="14"></nobr><br/><br/><br/><br/><br/><br/><br/>
+           　  お寺巡りコース③　　お寺巡りコース④
+           　<img src="otera.jpg" width="100" height="100" align="left" hspace="23"><img src="otera2.jpg" width="100" height="100" align="right" hspace="14"><br/><br/><br/><br/><br/><br/><br/><br/>
+  　 和菓子コース①　　　和菓子コース②
+           　<img src="wagasi2.jpg" width="100" height="100" align="left" hspace="23"><img src="js/wagasi.jpeg" width="100" height="100" align="right" hspace="14"><br/><br/><br/><br/><br/><br/><br/>
+           
+           　          <!-- 折り畳み展開ポインタ -->
+<div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+<a style="cursor:pointer;">  <center> <div style="border-style: solid ; border-width: 0.5px; width: 100px; border-radius: 10px; background-color: #d8d8d8"class="more"><strong>もっと見る</strong></div></center>
+</a>
+</div>
+<!--// 折り畳み展開ポインタ -->
+ 
+<!-- 折り畳まれ部分 -->
+<div id="open" style="display:none;clear:both;">
+
+<!--ここの部分が折りたたまれる＆展開される部分になります。
+自由に記述してください。-->
+<br><br>
+           　　和風コース①　　　　和風コース②<br/>
+           　<a href="otani.html"><img src="js/wahuu.jpg" width="100" height="100" align="left" hspace="23"></a><img src="wahuu2.jpg" width="100" height="100" align="right" hspace="14"><br/><br/><br/><br/><br/><br/><br/>
+   　　名所コース　　　　娯楽コース
+           　<img src="meisyo.jpg" width="100" height="100" align="left" hspace="23"><img src="js/goraku.jpg" width="100" height="100" align="right" hspace="14"><br/><br/><br/><br/><br/><br/><br/><br/>
+　  グルメコース　　　　欲張りコース
+           　<img src="js/gurume.JPG" width="100" height="100" align="left" hspace="23"><img src="js/yokubari.jpg" width="100" height="100" align="right" hspace="14"><br/><br/><br/><br/><br/><br/><br/><br/>
+
+ 　　　　            <a style="cursor:pointer;">  <center> <div style="border-style: solid ; border-width: 0.5px; width: 100px; border-radius: 10px; background-color: #d8d8d8"class="more"><strong>もっと見る</strong></div></center>
+</a>
+</div>
+<!--// 折り畳まれ部分 -->
+ <br>
    <br>
    <img src="js/koukoku.jpg" width="300" height="50" align="left">
     </div>
     </div>
             <div data-role="page" id="add-page">
-        <div data-role="header" data-position="fixed" data-theme="c">
-            <h1>保存</h1>
-            <a href="shoto2.html" data-icon="back" class="ui-btn-left">back</a>
-        </div>
-        <div data-role="content">
-            <input id="todo-title" type="text" placeholder="TODO Title">
-            <input id="add-button" type="button" value="Save" onclick="addTodo()">
-            </div>
+
     </div>
 </body>
 </html>
