@@ -9,6 +9,53 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/cssua.min.js"></script>
     <script src="js/app.js"></script>
+    
+    
+    
+ <style type="text/css">
+ #checklist{
+ list-style-type:none;
+ margin:0;padding:0;
+ }
+ #checklist li{
+ margin:0;padding:0;
+ }
+ </style>
+ <script type="text/javascript">
+ function jump1(){
+ var clist = document.getElementById('checklist').getElementsByTagName('input');
+ var URLlist = new Array();
+ URLlist['0'] = 'tokyo.html';
+ URLlist['1'] = 'shoto3.html';
+ var condition='';
+ for(var i=0;i<clist.length;i++) {
+ condition += (clist[i].checked)?'1':'0';
+ }
+ if(condition == '000') {
+ alert('チェックが一つもありません');
+return;
+ }
+ //alert(URLlist[condition]);return; //テスト用
+location.href=URLlist[condition];
+ }
+ function jump2(){
+ var clist = document.getElementById('checklist').getElementsByTagName('input');
+ var condition='';
+ for(var i=0;i<clist.length;i++) {
+ condition += (clist[i].checked)?i+1:'';
+ }
+ if(condition == '') {
+ alert('チェックが一つもありません');
+return;
+ }
+ //alert(condition+'.html');return; //テスト用
+location.href=condition+'.html';
+ }
+ </script>
+ </head>
+    
+    
+    
 </head>
 <body>
     <div data-role="page" id="list-page">
@@ -21,24 +68,24 @@
         <div data-role="content">
             <ul data-role="listview" data-inset="true" id="todo-list"></ul>
             
-<strong>出発日</strong>
+<strong>出発日　必須</strong>
  <input type="date" cmanCLDat="USE:ON" style="width:150px;">    
  
-<strong>帰宅日</strong>
+<strong>帰宅日　必須</strong>
  <input type="date" cmanCLDat="USE:ON" style="width:150px;">                
  
 
-        <br /><strong>出発地</strong> 
+        <br /><strong>出発地　必須</strong> 
 
         <INPUT type="text" name="namae" size="3" value="岐阜県岐阜市橋本町×-××">
-        <strong>目的地</strong>
+        <strong>目的地　必須</strong>
 　　　　<INPUT type="text" name="namae" value="京都府">
 <br />
 
 
 
             
-<strong>人数</strong>　大人       
+<strong>人数　必須</strong>　大人       
      <INPUT type="textarea" name="namae" size="2" value="４">人　
      子供
      <INPUT type="textarea" name="namae" size="2" value="０">人
@@ -47,7 +94,7 @@
        
        
        <br><br>
-       <strong>予算(一人当たり)</strong> <p>
+       <strong>予算(一人当たり)　必須</strong> <p>
 <select > 
 <option >~10000円</option>
 <option >10000~20000円</option>
@@ -63,13 +110,18 @@
 </select>
 </p>
 
+<br>
 
-<form action="cgi-bin/abc.cg" method="post">
-<p>
-<strong>車使用</strong>
-<input type="checkbox" name="riyu" value="1" checked="checked">
-</p>
-</form>
+<strong>車使用(ありの場合チェック)</strong>
+ <ul id="checklist">
+ <li><input type="checkbox" id="cb01"></li>
+ </ul>
+
+<br>
+
+
+
+
 
 
 
@@ -172,12 +224,12 @@ function delSample() {
        
        
        
+       <p><input type="button" value="検索する" onclick="jump1()"></p>
        
        
        
        <center>
-       <FONT size="3">
-<input type="button" onclick="location.href='shoto3.html' "value="検索する">
+       
        </center>
        </FONT>
        <br /><br />
