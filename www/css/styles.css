@@ -48,6 +48,19 @@ input[type=checkbox] {
 
 
 
+
+INPUT[type=checklist]{
+ list-style-type:none;
+ margin:0;padding:0;
+ }
+ #checklist li{
+ margin:0;padding:0;
+ }
+
+
+
+
+
  
  --></style>
  </head>
