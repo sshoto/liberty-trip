@@ -51,17 +51,23 @@
 <option >100000円~</option>
 </select>
 </p>
-　
-      <strong>車使用</strong>　あり <span style="border-style: solid ; border-width: 1px; width: 300px;"> &#10004;</span> 　なし <span style="border-style: solid ; border-width: 1px; width: 300px;"> 　</span>
-       <br /><br />
-       <strong>キーワード</strong>　
-　　　　<INPUT type="text" name="namae" value="金閣寺">
-       <INPUT type="text" name="namae" value="和菓子">
 
+
+<form action="cgi-bin/abc.cg" method="post">
+<p>
+<strong>車使用</strong>
+<input type="checkbox" name="riyu" value="1" checked="checked">
+</p>
+</form>
+<br />
+
+
+<strong>キーワード</strong>　
+　　　<INPUT type="text" name="namae" value="金閣寺">
+       <INPUT type="text" name="namae" value="和菓子">
        
        
-       
-       
+
        
        <script type="text/javascript">
 window.onload=addSample;
@@ -69,14 +75,20 @@ window.onload=addSample;
 //-------------------------------------------------------------------
 var SampleNum = 0;
 function addSample() {
-    var text = document.createElement('input');
+    var text = document.createElement('textarea');
     this.SampleNum++;
     text.type = 'textarea'
-    text.size="39";
-    text.id   = 'TextSample_' + this.SampleNum;
+    text.color='black';
+    text.size='40px';
+    text.id   = 'TextSample' + this.SampleNum;
     text.name = 'TextSample_' + this.SampleNum;
-    text.value = '';
-    
+    text.cols="38";
+    text.style="solid; border-radius:10px; -moz-border-radius: 10px; webkit-border-radius: 10px; background-color:#f8f8f8";
+
+
+
+
+
 
 
     var div = document.getElementById('TextSample');
@@ -135,8 +147,7 @@ function delSample() {
     </table>
       
     
-      
- 
+
       
     </form>
   </body>
@@ -144,7 +155,12 @@ function delSample() {
 
        
        
-       
+
+
+
+
+
+
        
        
        
